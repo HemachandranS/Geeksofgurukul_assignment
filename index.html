@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="styles.css" rel="stylesheet">
+    <link href="sidebar.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+  <div class="body2">
+    <div class="vid-title">Complete Web Dev course</div>
+  <div class="main-frame">
+    <div class="vid-part">
+        <div class="video"></div>
+        <div class="vid-description">
+            <div class="text">Text About video</div>
+            <div class="next-prev">
+            <div class="previous">Previous</div>
+            <div class="next">Next</div></div>
+        </div>
+    </div>
+    <div class="content-list">
+      <div class="course-content">
+        <div class="course">Course content</div>
+        <div class="bar"><div class="skills css">80%</div></div>
+      </div>
+      <div class="search">
+      <input  class="box" type="text" placeholder="Search lesson" name="search2">
+      <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+      <div class="list">
+        <button class="collapsible">Open Section 1</button>
+<div class="content">
+  <p>Video 1</p>
+</div>
+<button class="collapsible">Open Section 2</button>
+<div class="content">
+  <p>video 2</p>
+</div>
+<button class="collapsible">Open Section 3</button>
+<div class="content">
+  <p>video 3</p>
+</div>
+<button class="collapsible">Open Section 4</button>
+<div class="content">
+  <p>video 3</p>
+</div>
+<button class="collapsible">Open Section 5</button>
+<div class="content">
+  <p>video 3</p>
+</div>
+<button class="collapsible">Open Section 6</button>
+<div class="content">
+  <p>video 3</p>
+</div>
+      </div>
+    </div>
+  </div>
+   </div>
+</body>
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+  
+</html>
